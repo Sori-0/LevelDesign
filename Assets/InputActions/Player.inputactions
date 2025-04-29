@@ -2,7 +2,7 @@
     "name": "Player",
     "maps": [
         {
-            "name": "Movement",
+            "name": "Player",
             "id": "74a903f7-68e9-4e60-abce-0fb83f480496",
             "actions": [
                 {
@@ -31,6 +31,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Look",
+                    "type": "Value",
+                    "id": "048734e7-5eab-459d-b2c1-020695f97bd2",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -168,6 +177,17 @@
                 },
                 {
                     "name": "",
+                    "id": "d6d6e77d-fb64-479f-a3db-ea7cd9731e67",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "c9b305a4-1af2-442b-a0ca-39c9040924ac",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
@@ -176,89 +196,39 @@
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "CameraRotation",
-            "id": "fe4a18ae-8721-464f-add5-c61ec47fecbc",
-            "actions": [
-                {
-                    "name": "Rotation",
-                    "type": "Value",
-                    "id": "eb4273fd-697d-47d2-96ae-9c6df5cc3847",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                }
-            ],
-            "bindings": [
+                },
                 {
                     "name": "",
-                    "id": "88ad71e3-9228-4a07-b8fa-c4df0927e628",
+                    "id": "ccbc8a99-0f24-48a8-a6c3-7b458e09fc37",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b0305a39-e536-4712-9868-d477faa102a1",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "32395db2-624f-43c0-93d9-0aad5c52fb5e",
                     "path": "<Gamepad>/rightStick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Rotation",
+                    "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "2D Vector",
-                    "id": "54cef0a4-c7af-4c7d-b12e-c1551cf94591",
-                    "path": "2DVector",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Rotation",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "up",
-                    "id": "f41f3815-e573-495c-9cec-8eea7797ba78",
-                    "path": "<Keyboard>/numpad8",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Rotation",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "2c61c00c-43e2-4f53-9608-4ba502251659",
-                    "path": "<Keyboard>/numpad2",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Rotation",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "93a2e55b-77fe-47bb-86ec-5233a696c0b9",
-                    "path": "<Keyboard>/numpad4",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Rotation",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "be0e1844-ddf7-4264-bf9f-68d22b289b47",
-                    "path": "<Keyboard>/numpad6",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Rotation",
-                    "isComposite": false,
-                    "isPartOfComposite": true
                 }
             ]
         }

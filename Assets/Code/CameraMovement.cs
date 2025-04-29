@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Cinemachine;
 
 public class CameraMovement : MonoBehaviour
 {
     Quaternion cameraRotation;
     Vector3 cameraVector;
+    CinemachineVirtualCamera _virtualCamera;
     [SerializeField] float speedCameraRotation;
     
     private void FixedUpdate()
