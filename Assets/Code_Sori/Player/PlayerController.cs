@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
@@ -15,10 +16,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] float targetRotation;
 
+    [SerializeField] bool grounded;
+    [SerializeField] float jumpCuldown;
+    [SerializeField] float jumpForce;
+
     private float xRotation;
     private float yRotation;
     private Quaternion rotationCameraDregrees;
-
+    
 
     private void Update()
     {
@@ -31,7 +36,10 @@ public class PlayerController : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 20 * Time.deltaTime);
         }
         targetDirection = Quaternion.Euler(0, targetRotation, 0) * Vector3.forward;
-        rb.velocity = movementVector * speed;   
+        rb.velocity = movementVector * speed;
+
+        Jump(_playerInputManager.isJumping);
+        
     }
 
     private void LateUpdate()
@@ -47,4 +55,12 @@ public class PlayerController : MonoBehaviour
         _cameraFollowTarget.rotation = rotationCameraDregrees;
     }
 
+    
+    void Jump(float value)
+    {
+        if(value > 0f)
+        {
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
+    }
 }

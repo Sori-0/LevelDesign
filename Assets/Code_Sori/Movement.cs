@@ -86,7 +86,6 @@ public class Movement : MonoBehaviour
     }
     void OnXilofono()
     {
-
         if (xilofono == true && changexilfono == false)
         {
             transform.position = xilofonoPos.position;
@@ -169,7 +168,7 @@ public class Movement : MonoBehaviour
     }
     #endregion
 
-    IEnumerator waitChangePos()
+    public IEnumerator waitChangePos()
     {
         yield return new WaitForSeconds(0.5f);
         XiolfonoObject.transform.SetParent(transform, true);

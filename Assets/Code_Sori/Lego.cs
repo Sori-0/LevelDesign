@@ -3,10 +3,13 @@ using UnityEngine;
 
 public class Lego : MonoBehaviour
 {
-    [SerializeField]GameObject legoDad;
+    [SerializeField] GameObject legoDad;
     [SerializeField] GameObject Player;
     [SerializeField] int num;
     [SerializeField] Movement _scriptMovement;
+
+    [SerializeField] Transform boatPos;
+    [SerializeField] GameObject _Player;
 
     private void FixedUpdate()
     {
@@ -35,6 +38,11 @@ public class Lego : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         legoDad.transform.SetParent(Player.transform);
+    }
+
+    public  void LegoStart()
+    {
+
     }
 
 }
